@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manis Tradings - Premium Fabrics</title>
+
+    <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #fafafa;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #f19845, #4a00e0);
+            padding: 18px 10%;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe082;
+        }
+
+        /* Hero/banner */
+        .hero {
+            background: url('images/fabric-banner.jpg') center/cover no-repeat;
+            height: 65vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(126, 194, 226, 0.4);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            color: rgb(0, 0, 0);
+            font-size: 42px;
+            max-width: 700px;
+            line-height: 1.3;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 30px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .product-card p {
+            margin-top: 12px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* Contact box */
+        .contact-box {
+            background: white;
+            padding: 30px;
+            max-width: 420px;
+            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 999;
+            transition: 0.3s ease-in-out;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float img {
+            width: 38px;
+        }
+.hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ),
+    url("images/back.webp"); /* replace with your image path */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    max-width: 900px;
+    line-height: 1.3;
+}
+.brand-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Premium SPM Monogram */
+.spm-monogram {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -6px; /* merges letters */
+
+    background: linear-gradient(
+        135deg,
+        #14b129,
+        #3008e4,
+        #000000
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    position: relative;
+    transform: rotate(-6deg); /* round motion */
+}
+
+/* Curved underline = circular feel */
+.spm-monogram::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    bottom: -6px;
+    left: 0;
+
+    border-bottom: 3px solid rgba(245, 0, 0, 0.7);
+    border-radius: 50%;
+}
+
+
+
+
+/* Header text color (for gradient header) */
+.site-header h2,
+.site-header nav a {
+    color: #ffffff;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <h2 class="brand-title">
+        <span class="spm-monogram">SPM</span>
+        Manis Tradings
+    </h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+
+
+
+  <!-- Hero Section -->
+<section id="home" class="hero">
+    <h1>Premium Interlock Fabrics – Plain, Printed & Stripes</h1>
+</section>
+
+
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Us</h2>
+<p style="text-align:center; max-width:750px; margin:auto; font-size:18px; line-height:1.8;">
+    Welcome to <b>Manis Tradings</b> — a premium destination for high-quality 
+    <b>interlock knit fabrics</b> crafted to meet modern fashion and export standards.
+    <br><br>
+    We specialize in <b>plain shades, 50+ exclusive printed designs, and 10+ stripe varieties</b>, 
+    delivering fabrics that combine <b>luxurious softness, superior durability, and excellent comfort</b>.
+    Every fabric is carefully processed to ensure <b>color fastness, smooth finish, and long-lasting quality</b>.
+    <br><br>
+    At Manis Tradings, we go beyond supply — we offer <b>customized fabric solutions</b> tailored to your needs, 
+    including <b>custom prints, colors, GSM, and patterns</b>. Whether you are a boutique, garment manufacturer, 
+    brand owner, or bulk buyer, we ensure consistent quality and timely delivery.
+    <br><br>
+    Serving customers across <b>Pan India</b>, we are committed to providing 
+    <b>export-quality fabrics at competitive prices</b>, helping your designs stand out and your business grow.
+</p>
+
+
+
+        <!-- Fabric Specifications -->
+<section id="specs">
+    <h2>Fabric Specifications</h2>
+
+    <div style="
+        max-width:800px;
+        margin:auto;
+        background:white;
+        padding:40px;
+        border-radius:20px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.1);
+        font-size:17px;
+        line-height:1.8;
+    ">
+       <ul style="list-style:none; padding:0;">
+    <li><b>Fabric Type:</b> Premium Interlock Knit Fabric</li>
+    <li><b>Material:</b> 100% Pure Cotton</li>
+    <li><b>GSM:</b> 180 – 200 GSM (High Durability, Soft & Long-Lasting Fabric)</li>
+    <li><b>Width:</b> 34 inches & 68 inches</li>
+    <li><b>Texture:</b> Ultra-Soft, Breathable, Skin-Friendly & Stretchable</li>
+    <li><b>Quality:</b> Export Quality Fabric with Fine Finish</li>
+    <li><b>Color Options:</b> Available in 10+ Plain Solid Shades</li>
+    <li><b>Print Options:</b> 50+ Exclusive Print Designs including Floral, Kids Prints, Digital Prints, Seamless Patterns & Trend-Based Designs</li>
+    <li><b>Stripe Variants:</b> 10+ Stripe Varieties including Dual-Color, Multi-Color, Thin & Bold Stripe Patterns</li>
+    <li><b>Customization:</b> Customized Orders Available – Any Fabric Type, GSM, Width, Color, Print & Stripe Pattern as per Customer Requirement</li>
+    <li><b>MOQ:</b> Flexible Minimum Order Quantity for Bulk & Custom Orders</li>
+    <li><b>Usage:</b> T-Shirts, Nightwear, Babywear, Women’s Wear, Activewear, Loungewear & Casual Wear</li>
+    <li><b>Care Instructions:</b> Easy to Wash, Colorfast & Shrink-Resistant</li>
+    <li><b>Availability:</b> Ready Stock & Made-to-Order Options Available</li>
+</ul>
+
+    </div>
+</section>
+ 
+    </section>
+
+    <!-- Products -->
+    <section id="products">
+        <h2>Our Products</h2>
+
+        <h3>Plain Fabrics (Colour Options)</h3>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/red.png">
+                <p>Red Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/lightblue.png">
+                <p>Blue Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/mintgreen.png">
+                <p>Green Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/peacocokgreen.png">
+                <p>Peacock Green Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/darkorange.png">
+                <p>Dark Orange Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/baby pink.png">
+                <p>Baby Pink Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/royal blue.png">
+                <p>Royal Blue Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/ltorange.png">
+                <p>Light Orange Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/cream (1).png">
+                <p>Cream Plain Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/rani pink.png">
+                <p>Rani Pink Plain Fabric</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h3>Printed Fabrics</h3>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/starprint.jpeg">
+                <p>Star Print Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/fruits.jpeg">
+                <p>Fruits Print Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/numberprint.jpeg">
+                <p>Number Print Fabric</p>
+            </div>
+             <div class="product-card">
+                <img src="images/race.jpeg">
+                <p>Car Print Fabric</p>
+            </div>
+             <div class="product-card">
+                <img src="images/umbrella1.jpg">
+                <p>Umbrella Print Fabric</p>
+            </div>
+             
+             <div class="product-card">
+                <img src="images/balloon.png">
+                <p>Balloon Print Fabric</p>
+            </div>
+              <div class="product-card">
+                <img src="images/icecream.jpeg">
+                <p>Ice-Cream Print Fabric</p>
+            </div>
+             
+              <div class="product-card">
+                <img src="images/heart.jpeg">
+                <p>Heart Print Fabric</p>
+            </div>
+             
+              <div class="product-card">
+                <img src="images/alpha.jpeg">
+                <p>Alphabets Print Fabric</p>
+            </div>
+            
+              <div class="product-card">
+                <img src="images/toys.jpeg">
+                <p>Toys Print Fabric</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <h3>Stripes Fabrics</h3>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="images/pinkstripes.JPG">
+                <p>Pink Stripes</p>
+            </div>
+            <div class="product-card">
+                <img src="images/yellowredblue.jpg">
+                <p>Multi Colour Stripes Fabric</p>
+            </div>
+             <div class="product-card">
+                <img src="images/black.JPG">
+                <p>Black Stripes Fabric</p>
+            </div>
+             <div class="product-card">
+                <img src="images/lavendarstripes.JPG">
+                <p>Lavendar Stripes Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/redstripes.jpeg">
+                <p>Red Stripes Fabric</p>
+            </div>
+             <div class="product-card">
+                <img src="images/royal.JPG">
+                <p>Royal Blue Stripes Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/bluestripes.JPG">
+                <p>Blue Stripes Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/yellowstripes.jpg">
+                <p>Yellow Stripes Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/navystripes.jpg">
+                <p>Navy Stripes Fabric</p>
+            </div>
+            <div class="product-card">
+                <img src="images/multicolour.jpg">
+                <p>Multi-Colour Stripes Fabric</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <!-- Contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+        <h3>Manis Tradings – Tirupur</h3>
+
+        <p style="margin-bottom:10px;">
+            We’re here to help you with <b>fabric enquiries, bulk orders, customization requests, 
+            pricing details, and delivery support</b>. Reach out to us anytime — our team will be happy to assist you.
+        </p>
+
+        <p><b>📞 Phone:</b> 
+            <a href="tel:9445502323" style="color:#333; text-decoration:none; font-weight:600;">
+                +91 94455 02323
+            </a>
+        </p>
+
+        <p><b>📧 Email:</b> 
+            <a href="mailto:manistradings7@gmail.com" style="color:#333; text-decoration:none; font-weight:600;">
+                manistradings7@gmail.com
+            </a>
+        </p>
+
+        <p><b>🕒 Business Hours:</b><br>
+            Monday – Saturday: 9:30 AM – 8:00 PM<br>
+            Sunday - Holiday
+        </p>
+
+        <p><b>📦 Services:</b><br>
+            ✔ Export Quality Interlock Fabrics<br>
+            ✔ Plain, Printed & Striped Fabrics<br>
+            ✔ Bulk & Wholesale Supply<br>
+            ✔ Custom Prints, Colors & GSM Available<br>
+            ✔ Pan India Delivery
+        </p>
+
+        <p>
+            <a href="https://maps.app.goo.gl/LUHBPiQX9PJh9vAo8?g_st=ac" 
+               target="_blank" 
+               style="color:#0d6efd; text-decoration:none; font-weight:600; display:flex; align-items:center; gap:8px;">
+                
+                <!-- Map Pin SVG Icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#d10e0e" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
+                </svg>
+                Visit Our Location – Tirupur
+            </a>
+        </p>
+
+        <p>
+            <a href="https://instagram.com/manis_tradings" 
+               target="_blank" 
+               style="color:#d63384; text-decoration:none; font-weight:600; display:flex; align-items:center; gap:8px;">
+                
+                <!-- Instagram Logo SVG -->
+                <svg height="22" width="22" viewBox="0 0 24 24" fill="#d63384" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 2C4.243 2 2 4.243 2 7V17C2 19.757 4.243 22 7 22H17C19.757 22 22 19.757 22 17V7C22 4.243 19.757 2 17 2H7ZM12 7C14.757 7 17 9.243 17 12C17 14.757 14.757 17 12 17C9.243 17 7 14.757 7 12C7 9.243 9.243 7 12 7ZM18 6C18.552 6 19 6.448 19 7C19 7.552 18.552 8 18 8C17.448 8 17 7.552 17 7C17 6.448 17.448 6 18 6Z"/>
+                </svg>
+                Follow Us on Instagram for Latest Designs
+            </a>
+        </p>
+
+        <p style="font-weight:600; margin-top:15px;">
+            📲 For quick enquiries & instant quotes, chat with us on WhatsApp
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Manis Tradings • All Rights Reserved
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp-float" 
+   href="https://wa.me/919445502323?text=Hello%20Manis%20Tradings%2C%20I%20am%20interested%20in%20your%20fabric%20collection.%20Please%20share%20details."
+   target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+</a>
+
+
+</body>
+</html>
